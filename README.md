@@ -66,8 +66,6 @@ and k + 17
 
 Tupper's Formula Drawing the Galaga Ship
 
-As always, feel free to leave a comment, subscribe, or share if you thought this was interesting! And don’t forget to leave your own interesting “k’s” down below in the comments!
-
 Credits to Numberphile on Youtube for informing me on the formula. I highly recommend it!
 
 As an aside, the existence of a massive number of possible outcomes is similar to the numberspace of possible private keys in crytosecurity systems with a sufficiently high key size, like in some cryptocurrencies like Bitcoin and Ethereum. keys.lol is a good site to browse through the huge 2^160 possible private/public key combinations of both cryptocurrencies.
