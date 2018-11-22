@@ -1,8 +1,8 @@
 # MatlabTuppersFormula
 
-*Part 1 of a reupload to github of pieces of my former personal website paulsblog.us. With minor edits and updates*
+*Part 1 of a reupload to github of pieces of my former and now defunct personal website paulsblog.us. With minor edits and updates*
 
-In 2001, Jeff Tupper at the University of Toronto published a paper named Reliable Two-Dimensional Graphing Methods for Mathematical Formulae with Two Free Variables and presented it at SIGGRAPH 2001. It introduces an equation that when graphed, produces every single possible 17×106 resolution bitmap every 17 pixels on the y axis up to somewhere in the range of 17*1802! (That’s 1802 Factorial – every number from 1 to 1802 multiplied by each other: 1*2*3*4*5…*1801*1802!), which is the total number of possible images in a 17×106 resolution bitmap, considering only black and white. This set of bitmaps includes literally everything, including an upside-down pixellated version of itself (hence why it was termed Tupper’s Self Referential Formula) between the value k =
+In 2001, Jeff Tupper at the University of Toronto published a paper named Reliable Two-Dimensional Graphing Methods for Mathematical Formulae with Two Free Variables and presented it at SIGGRAPH 2001. It introduces an equation that when graphed, produces every single possible 17×106 resolution bitmap every 17 pixels on the y axis up to somewhere in the range of 17·1802! (That’s 1802 Factorial – every number from 1 to 1802 multiplied by each other: 1·2·3·4·5…·1801·1802), which is the total number of possible images in a 17×106 resolution bitmap, considering only black and white. This set of bitmaps includes literally everything, including an upside-down pixellated version of itself (hence why it was termed Tupper’s Self Referential Formula) between the value k =
 
 960 939 379 918 958 884 971 672 962 127 852 754 715 004 339 660 129 306 651 505 519 271 702 802 395 266 424 689 642 842 174 350 718 121 267 153 782 770 623 355 993 237 280 874 144 307 891 325 963 941 337 723 487 857 735 749 823 926 629 715 517 173 716 995 165 232 890 538 221 612 403 238 855 866 184 013 235 585 136 048 828 693 337 902 491 454 229 288 667 081 096 184 496 091 705 183 454 067 827 731 551 705 405 381 627 380 967 602 565 625 016 981 482 083 418 783 163 849 115 590 225 610 003 652 351 370 343 874 461 848 378 737 238 198 224 849 863 465 033 159 410 054 974 700 593 138 339 226 497 249 461 751 545 728 366 702 369 745 461 014 655 997 933 798 537 483 143 786 841 806 593 422 227 898 388 722 980 000 748 404 719
 
@@ -17,11 +17,9 @@ It also includes a right side up version between k =
 
 and k + 17 that I found here on another blog here after I had already written my code (which will output the same image if the line in the code below containing the function fliplr is deleted).
 
-Tupper’s Self Referential Formula can be written as \frac{1}{2} < mod(\lfloor \lfloor \frac{y}{17} \rfloor * 2^{-17*\lfloor x \rfloor - mod(\lfloor y \rfloor, 17)}, 2 \rfloor),
+Tupper’s Self Referential Formula can be written as 1/2 < mod(⌊ ⌊ y/17 ⌋ · 2^{-17·⌊ x ⌋ - mod(⌊ y ⌋, 17)}, 2 ⌋),
 
-where the \lfloor\rfloor stands for the floor function – pretty much rounding down to the nearest integer below the input value and mod stands for modular division – otherwise known as the remainder of a regular division operation.
-
-So, as an aside, I’ve decided to use Matlab for this post, firstly, because it has built in plotting subroutines that simplify plotting a function, as opposed to C# where you would have to write graphing code from the ground up, and secondly to differentiate this post from the others (which have been entirely C#).
+I’ve decided to use Matlab for this project, due to Matlab having built in plotting subroutines that make data visualization much easier to code.
 
 In the code, I customarily clear all of the previously stored data and forms with a clear all, close all. The constant k represents a symbolic value (since declaring k as a regular variable would cause a massive overflow error for even 64 bit data types) that splits the value k above into chunks that are stitched together.
 
