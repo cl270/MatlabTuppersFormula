@@ -21,7 +21,7 @@ and k + 17.
 
 ## Formula
 
-Tupper’s Self Referential Formula can be written as 1/2 < mod(⌊ ⌊ y/17 ⌋ · 2^{-17·⌊ x ⌋ - mod(⌊ y ⌋, 17)}, 2 ⌋),
+Tupper’s Self Referential Formula can be written as 1/2 < mod(⌊ ⌊ y/17 ⌋ · 2^{-17·⌊ x ⌋ - mod(⌊ y ⌋, 17)}, 2 ⌋). (Too bad github has no built in LaTeX support)
 
 ## Rationale
 
